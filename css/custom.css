@@ -3,6 +3,7 @@ body {
 	background-color: #323232;
 	color: #cfcfcf;
 	font-family: "Belanosima", "Tiro Bangla", sans-serif;
+	font-size: 16px;
 	}
 	
 h1, h2, h3, h4, h5, h6 {
@@ -21,7 +22,7 @@ h1, h2, h3, h4, h5, h6 {
 .footer-blurb {
     padding: 30px 0;
     background-color: #5555ff;
-    color: #cfcfcf;
+    color: #ffffff;
 }
     
 .footer-blurb-item {
