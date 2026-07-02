@@ -24,7 +24,7 @@ The Android layout has two additional differences from Bijoy:
 
 | Platform | Method | Status |
 |---|---|---|
-| Linux (IBus/m17n) | Bundled in `m17n-db`; updated layout in ≥ 1.8.13 | No installation needed |
+| Linux (IBus/m17n) | Bundled in `m17n-db`; updated layout in ≥ 1.8.13 | No installation needed. See [m17n-db](https://cgit.git.savannah.nongnu.org/cgit/m17n/m17n-db.git/) |
 | Linux (XKB) | Symbols file + XKB rules registration | See [XKB installation](#xkb-installation-linux) |
 | Windows | Installer built with MSKLC | See [Windows](#windows) |
 | Android | [HeliBoard](https://github.com/Helium314/HeliBoard/releases/latest), [FlorisBoard](https://github.com/florisboard/florisboard/releases/latest), [FUTO Keyboard](https://play.google.com/store/apps/details?id=org.futo.inputmethod.latin.playstore), [Simple Keyboard](https://play.google.com/store/apps/details?id=rkr.simplekeyboard.inputmethod) | Available separately. [See project website](https://oishikstudio.github.io/unijoy/) |
@@ -299,8 +299,8 @@ Extract the zip, then run `setup.exe` inside it. Windows SmartScreen may show an
 
 The zip also includes two reference PDFs to help you get started:
 
-- **User Manual.pdf** — how to use the layout for typing once it's installed.
-- **Bangla Ligature List.pdf** — the full list of Bangla conjuncts (ligatures) and how to type them.
+- **[user-manual.pdf](docs/manuals/user-manual.pdf)** — how to use the layout for typing once it's installed.
+- **[bangla-ligature-list.pdf](docs/manuals/bangla-ligature-list.pdf)** — the full list of Bangla conjuncts (ligatures) and how to type them.
 
 **3. Add the language**
 
@@ -320,12 +320,12 @@ The `g`/`G` (hasanta/VIRAMA) keys behave differently on Windows than in the m17n
 
 | Input | Windows | m17n (Linux) |
 |---|---|---|
-| g |  ্ (dead key) |  ্ (dead key) |
-| Shift+G | । (danda) | । (danda) |
-| VIRAMA dead key + VIRAMA (g + g) | ্ (VIRAMA) | ্‌ (VIRAMA + ZWNJ) |
-| VIRAMA dead key + Shift+G (g + G) | ॥ (double danda) | ॥ (double danda) |
-| Alt+G | ্‌ (VIRAMA + ZWNJ) | ্ (VIRAMA) |
-| Alt+Shift+G | ॥ (double danda) | ্‌ (VIRAMA + ZWNJ) |
+| g |  ্ (VIRAMA dead key) |  ্ (VIRAMA dead key) |
+| G | । (Danda) | । (Danda) |
+| VIRAMA (dead key) + VIRAMA (g + g) | ্ (VIRAMA) | ্‌ (VIRAMA + ZWNJ) |
+| VIRAMA (dead key) + Danda (g + G) | ॥ (Double Danda) | ॥ (Double Danda) |
+| Alt+g | ্‌ (VIRAMA + ZWNJ) | ্ (VIRAMA) |
+| Alt+G | ॥ (Double Danda) | ্‌ (VIRAMA + ZWNJ) |
 
 ---
 
@@ -333,14 +333,20 @@ The `g`/`G` (hasanta/VIRAMA) keys behave differently on Windows than in the m17n
 
 ```
 .
-├── README.md             # This file
-├── unijoy                # XKB symbols file (Linux)
-├── unijoy.klc            # MSKLC keyboard layout file (Windows)
-├── install.sh            # XKB installer (Linux, needs sudo)
-├── uninstall.sh          # Reverses install.sh
+├── README.md                            # This file
+├── docs/
+│   └── manuals/                         # User Manual, Bangla Ligature List (ODT + PDF)
+│       ├── user-manual.odt
+│       ├── user-manual.pdf
+│       ├── bangla-ligature-list.odt
+│       └── bangla-ligature-list.pdf
+├── unijoy                               # XKB symbols file (Linux)
+├── unijoy.klc                           # MSKLC keyboard layout file (Windows)
+├── install.sh                           # XKB installer (Linux, needs sudo)
+├── uninstall.sh                         # Reverses install.sh
 └── scripts/
-    ├── manage_xkb_variant.py   # In-place install/uninstall of the unijoy variants across the XKB rules files (.xml and .lst)
-    └── evdev-fragment.xml      # The two <variant> blocks manage_xkb_variant.py inserts/removes
+    ├── manage_xkb_variant.py            # In-place install/uninstall of the unijoy variants
+    └── evdev-fragment.xml               # The two <variant> blocks to insert/remove
 ```
 
 ---
