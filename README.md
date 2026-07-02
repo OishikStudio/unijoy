@@ -219,7 +219,23 @@ You can also confirm that the input method file is present:
 ls /usr/share/m17n/bn-unijoy.mim
 ```
 
-If you want the updated layout and your distribution doesn't yet ship 1.8.13, the most straightforward option is to wait for your distribution to update the package, or to build `m17n-db` from source. If you hit a problem, please open an issue.
+If you're on an older version, you have two options:
+
+1. **Wait for your distribution to update the package**, or build `m17n-db` from source.
+2. **Download the updated `.mim` file directly** and drop it in place, without touching the rest of your `m17n-db` installation:
+
+```bash
+sudo curl -L -o /usr/share/m17n/bn-unijoy.mim \
+  https://cgit.git.savannah.nongnu.org/cgit/m17n/m17n-db.git/plain/MIM/bn-unijoy.mim
+```
+
+Restart IBus afterward for the change to take effect:
+
+```bash
+ibus restart
+```
+
+> This replaces only `bn-unijoy.mim` with the current upstream version — the rest of your distribution's `m17n-db` package is left untouched. A future package upgrade may overwrite this file with the distro's (possibly older) version; if that happens, just re-run the command above.
 
 ---
 
