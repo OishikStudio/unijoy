@@ -314,6 +314,19 @@ Use the language bar in the taskbar (or <kbd>Win</kbd>+<kbd>Space</kbd>) to swit
 
 Run `setup.exe` again and choose the `Remove the keyboard layout` option, or remove it from **Settings → Apps → Installed apps** by searching for "Unijoy".
 
+**Note: VIRAMA key differs from Linux/m17n**
+
+The `g`/`G` (hasanta/VIRAMA) keys behave differently on Windows than in the m17n `.mim` file:
+
+| Input | Windows | m17n (Linux) |
+|---|---|---|
+| g |  ্ (dead key) |  ্ (dead key) |
+| Shift+G | । (danda) | । (danda) |
+| VIRAMA dead key + VIRAMA (g + g) | ্ (VIRAMA) | ্‌ (VIRAMA + ZWNJ) |
+| VIRAMA dead key + Shift+G (g + G) | ॥ (double danda) | ॥ (double danda) |
+| Alt+G | ্‌ (VIRAMA + ZWNJ) | ্ (VIRAMA) |
+| Alt+Shift+G | ॥ (double danda) | ্‌ (VIRAMA + ZWNJ) |
+
 ---
 
 ## Project structure
