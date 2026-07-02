@@ -275,7 +275,7 @@ A Windows installer built with [MSKLC (Microsoft Keyboard Layout Creator)](https
 
 **1. Download the installer**
 
-Download `unijoy-windows-installer.zip` from the [latest release](https://github.com/OishikStudio/unijoy/releases/latest).
+Download `unijoy-windows-installer.zip` from the [latest release](https://github.com/OishikStudio/unijoy/releases/latest/download/unijoy-windows-installer.zip).
 
 **2. Extract and run**
 
