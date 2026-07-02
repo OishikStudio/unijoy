@@ -1,0 +1,27 @@
+<!-- BD-VARIANT: inserted right after the 'probhat' variant inside the 'bd' layout -->
+<variant>
+  <configItem>
+    <name>unijoy</name>
+    <shortDescription>bn</shortDescription>
+    <description>Bangla (Unijoy)</description>
+    <languageList>
+      <iso639Id>ben</iso639Id>
+      <iso639Id>sat</iso639Id>
+    </languageList>
+  </configItem>
+</variant>
+<!-- END BD-VARIANT -->
+
+<!-- IN-VARIANT: inserted right after the 'ben_probhat' variant inside the 'in' layout -->
+<variant>
+  <configItem>
+    <name>ben_unijoy</name>
+    <shortDescription>bn</shortDescription>
+    <description>Bangla (India, Unijoy)</description>
+    <languageList>
+      <iso639Id>ben</iso639Id>
+      <iso639Id>sat</iso639Id>
+    </languageList>
+  </configItem>
+</variant>
+<!-- END IN-VARIANT -->

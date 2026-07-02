@@ -1,0 +1,88 @@
+//
+// Author: Md. Rifat Hasan Jihan <rhjihan@outlook.com>
+// Created: 15 July 2016
+// Last Updated: 19 March 2024
+// Version: 1.02
+//
+// Issues:
+// <AC07> U-09BB is added though it is not allocated in Original Unicode
+// <AE06> U-09B3 is added though it is not allocated in Original Unicode
+// 3 Conjunct characters are not included
+//
+
+default  partial alphanumeric_keys
+xkb_symbols "basic" {
+   name[Group1]= "Bangla";
+   key <ESC>  { [ Escape ] };
+
+// numbers
+   key <TLDE> { [ U2018,	U201C,		U0060,		U007E		] };
+   key <AE01> { [ U09E7,	exclam,		voidsymbol,	voidsymbo	] };
+   key <AE02> { [ U09E8,	at,		voidsymbol,	voidsymbol	] };
+   key <AE03> { [ U09E9,	numbersign,	voidsymbol,	voidsymbol	] };
+   key <AE04> { [ U09EA,	U09F3,		dollar,		voidsymbol	] };
+   key <AE05> { [ U09EB,	percent,	voidsymbol,	voidsymbol	] };
+   key <AE06> { [ U09EC,	asciicircum,	voidsymbol,	voidsymbol	] };
+   key <AE07> { [ U09ED,	U0981,		U0026,		U09FA		] };
+   key <AE08> { [ U09EE,	asterisk,	voidsymbol,	voidsymbol	] };
+   key <AE09> { [ U09EF,	parenleft,	voidsymbol,	voidsymbol	] };
+   key <AE10> { [ U09E6,	parenright,	U200C,		U200D		] };
+   key <AE11> { [ U002D,	U2014,		U2013,		underscore	] };
+   key <AE12> { [ equal,	plus,		voidsymbol,	voidsymbol	] };
+   key <BKSP> { [ BackSpace ] };
+
+// tab, q to ] 
+   key <TAB>  { [ Tab,  ISO_Left_Tab ] };
+   key <AD01> { [ U0999,	U0982,	voidsymbol,	voidsymbol ] };
+   key <AD02> { [ U09AF,	U09DF,	voidsymbol,	voidsymbol ] };
+   key <AD03> { [ U09A1,	U09A2,	voidsymbol,	voidsymbol ] };
+   key <AD04> { [ U09AA,	U09AB,	voidsymbol,	voidsymbol ] };
+   key <AD05> { [ U099F,	U09A0,	voidsymbol,	voidsymbol ] };
+   key <AD06> { [ U099A,	U099B,	voidsymbol,	voidsymbol ] };
+   key <AD07> { [ U099C,	U099D,	voidsymbol,	voidsymbol ] };
+   key <AD08> { [ U09B9,	U099E,	voidsymbol,	voidsymbol ] };
+   key <AD09> { [ U0997,	U0998,	voidsymbol,	voidsymbol ] };
+   key <AD10> { [ U09DC,	U09DD,	voidsymbol,	voidsymbol ] };
+   key <AD11> { [ bracketleft,	braceleft,	voidsymbol,	voidsymbol ] };
+   key <AD12> { [ bracketright,	braceright,	voidsymbol,	voidsymbol ] };
+   key <RTRN> { [ Return ] };
+
+// caps, a to ' 
+// key <CAPS> { [ Caps_Lock ] };
+   key <AC01> { [ U09C3,	U09D7,	U098B,	U09E0  ] };
+   key <AC02> { [ U09C1,	U09C2,	U0989,	U098A  ] };
+   key <AC03> { [ U09BF,	U09C0,	U0987,	U0988  ] };
+   key <AC04> { [ U09BE,	U0985,	U0986,		voidsymbol ] };
+   key <AC05> { [ U09CD,	U0964,	U0965,		voidsymbol ] };
+   key <AC06> { [ U09AC,	U09AD,	voidsymbol,	voidsymbol ] };
+   key <AC07> { [ U0995,	U0996,	voidsymbol,	voidsymbol ] };
+   key <AC08> { [ U09A4,	U09A5,	voidsymbol,	voidsymbol ] };
+   key <AC09> { [ U09A6,	U09A7,	voidsymbol,	voidsymbol ] };
+   key <AC10> { [ semicolon,	colon,	voidsymbol,	voidsymbol ] };
+   key <AC11> { [ U2019,	U201D,	voidsymbol,	voidsymbol ] };
+
+// shift, z to /
+// key <LFSH> { [ Shift_L ] };
+   key <AB01> { [ U0981,	U0983,	voidsymbol,	voidsymbol ] };
+   key <AB02> { [ U09CB,	U09CC,	U0993,		U0994      ] };
+   key <AB03> { [ U09C7,	U09C8,	U098F,		U0990      ] };
+   key <AB04> { [ U09B0,	U09B2,	voidsymbol,	voidsymbol ] };
+   key <AB05> { [ U09A8,	U09A3,	voidsymbol,	voidsymbol ] };
+   key <AB06> { [ U09B8,	U09B7,	voidsymbol,	voidsymbol ] };
+   key <AB07> { [ U09AE,	U09B6,	voidsymbol,	voidsymbol ] };
+   key <AB08> { [ comma,	less,		voidsymbol,	voidsymbol ] };
+   key <AB09> { [ period,	greater,	voidsymbol,	voidsymbol ] };
+   key <AB10> { [ slash,	question,	voidsymbol,	voidsymbol ] };
+   key <BKSL> { [ U09CE,	U0983,		backslash,	bar ] };
+
+// third level with right-Alt
+    include "level3(ralt_switch)"
+
+};
+
+
+
+xkb_symbols "probhat" {
+    include "in(ben_probhat)"
+    name[Group1]= "Bangla (Probhat)";
+};
