@@ -62,7 +62,7 @@ ibus-daemon -drx
 
 **3. Add the Unijoy input source**
 
-Open **Settings → Region & Language → Input Sources**, click **+**, search for **Bengali**, and select **Bengali (Unijoy (m17n))**.
+Open **Settings → Keyboard → Add Input Sources**, search for **Bangla (Bangladesh) / Bangla (India)**, and select **Bangla (bn-unijoy (m17n))**.
 
 That's it. Switch to it using your desktop's input-source shortcut (usually <kbd>Super</kbd>+<kbd>Space</kbd>) and start typing.
 
@@ -244,7 +244,7 @@ ibus restart
 **Unijoy doesn't appear in the input source list after installing**
 Log out and back in — some desktops cache the keyboard registry per session. On GNOME (X11 only), you can also try pressing <kbd>Alt</kbd>+<kbd>F2</kbd>, typing `r`, and pressing <kbd>Enter</kbd> to restart the shell without logging out.
 
-**IBus is installed but "Bengali (Unijoy (m17n))" isn't in the list**
+**IBus is installed but "Bangla (bn-unijoy (m17n))" isn't in the list**
 Run `ibus list-engine | grep -i unijoy`. If the engine doesn't appear, confirm that `m17n-db` and `ibus-m17n` are both installed and run `ibus restart`. Note that on `m17n-db` older than 1.8.13 the engine will be present but will use an earlier revision of the layout — see [Older distributions](#older-distributions).
 
 **Switching to Unijoy does nothing / I still get English**
