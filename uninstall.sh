@@ -37,7 +37,7 @@ remove_xkb() {
 }
 
 main() {
-    bold "Unijoy Layout — Uninstaller"
+    bold "Unijoy Layout: Uninstaller"
     echo
 
     remove_xkb

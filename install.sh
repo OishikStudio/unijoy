@@ -10,7 +10,7 @@
 #
 # The rules files are edited in place. Run uninstall.sh to reverse the change.
 #
-# Note: the IBus/m17n method needs no installation at all — just install
+# Note: the IBus/m17n method needs no installation at all, just install
 # ibus and ibus-m17n, then add Bengali (Unijoy) from Settings.
 # See README.md for details.
 
@@ -66,7 +66,7 @@ install_xkb() {
 }
 
 main() {
-    bold "Unijoy Layout — XKB Installer"
+    bold "Unijoy Layout: XKB Installer"
     echo
     echo "This installs the Unijoy XKB keyboard layout system-wide."
     echo "It will ask for your sudo password."
