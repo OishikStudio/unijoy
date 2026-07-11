@@ -27,7 +27,7 @@ The Android layout has two additional differences from Bijoy:
 | Linux (IBus/m17n) | Bundled in `m17n-db` (updated layout in ≥ 1.8.13) | No installation needed. See [m17n-db](https://cgit.git.savannah.nongnu.org/cgit/m17n/m17n-db.git/) |
 | Linux (XKB) | Symbols file + XKB rules registration | See [XKB installation](#xkb-installation-linux) |
 | Windows | Installer built with MSKLC | See [Windows](#windows) |
-| Android | [HeliBoard](https://github.com/Helium314/HeliBoard/releases/latest), [FlorisBoard](https://github.com/florisboard/florisboard/releases/latest), [FUTO Keyboard](https://play.google.com/store/apps/details?id=org.futo.inputmethod.latin.playstore), [Simple Keyboard](https://play.google.com/store/apps/details?id=rkr.simplekeyboard.inputmethod) | Available separately. [See project website](https://oishikstudio.github.io/unijoy/) |
+| Android | [HeliBoard](https://github.com/Helium314/HeliBoard/releases/latest), [FlorisBoard](https://github.com/florisboard/florisboard/releases/latest), [FUTO Keyboard](https://play.google.com/store/apps/details?id=org.futo.inputmethod.latin.playstore), [Simple Keyboard](https://play.google.com/store/apps/details?id=rkr.simplekeyboard.inputmethod) | Available separately. [See project website](https://unijoy.pages.dev/android/) |
 
 ## Linux
 
@@ -295,20 +295,18 @@ Download `unijoy-windows-installer.zip` from the [latest release](https://github
 
 **2. Extract and run**
 
-Extract the zip, then run `setup.exe` inside it. Windows SmartScreen may show an "unrecognized app" warning since the installer isn't code-signed. Click **More info → Run anyway** to proceed. Administrator rights are required.
+Extract the zip, then run `setup.exe` inside it (administrator rights are required). It may show a SmartScreen "unrecognized app" warning since the installer isn't code-signed; click **More info → Run anyway** to proceed. Windows may show a **User Account Control (UAC)** prompt asking for permission, click **Yes**. 
+
+**3. Switch to it**
+
+Once installed, use the language bar in the taskbar (or <kbd>Win</kbd>+<kbd>Space</kbd>) to switch to **Bangla (Unijoy)**.
+
+<sub>The installer normally adds the Bangla language and Unijoy keyboard automatically. If it doesn't, add it manually via **Settings → Time & Language → Language & Region → Add a language**, and choose **Bangla (Unijoy)**.</sub>
 
 The zip also includes two reference PDFs to help you get started:
 
 - **[user-manual.pdf](docs/manuals/user-manual.pdf)**: how to use the layout for typing once it's installed.
 - **[bangla-ligature-list.pdf](docs/manuals/bangla-ligature-list.pdf)**: the full list of Bangla conjuncts (ligatures) and how to type them.
-
-**3. Add the language**
-
-After installation, open **Settings → Time & Language → Language & Region → Add a language**, search for **Bangla**, and add it. Windows will offer **Bangla (Unijoy)** as the keyboard for that language. Select it during setup, or add it afterward from the language's **Options** page.
-
-**4. Switch to it**
-
-Use the language bar in the taskbar (or <kbd>Win</kbd>+<kbd>Space</kbd>) to switch to **Bangla (Unijoy)**.
 
 **Uninstalling**
 
